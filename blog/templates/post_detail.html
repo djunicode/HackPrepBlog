@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="post row">
+        <div class="col-2 date">
+            <h1>{{ post.title }}</h1><hr>
+        </div>
+        {% if post.created_date %}
+            <div class="col-2 date">
+                {{ post.created_date }}
+            </div>
+        {% endif %}
+    </div><br />
+    <div class="post row">
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endblock %}
